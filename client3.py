@@ -41,8 +41,11 @@ def getDataPoint(quote):
 
 def getRatio(price_a, price_b):
     """ Get ratio of price_a and price_b """
-    """ ------------- Update this function ------------- """
-    return 1
+    """Also create some unit tests for the function in client_test.py"""
+    if price_b == 0:
+        # When price_b is 0, avoid throwing ZeroDivisionError
+        return None # or any other appropriate value indicating the division cannot be performed
+    return price_a / price_b
 
 
 # Main
